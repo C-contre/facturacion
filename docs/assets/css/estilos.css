@@ -4,9 +4,10 @@
   --Sillon: #f2c2b7;
   --Balcon: #b2d7ff;
   --Adentro: #ffdf75;
-  --Esquina: #d8ff6b;
+  --Esquina: #abff6b;
   --Patio: #98fb98;
   --Bancos: #ff7171;
+  --Barra: #e7ff71;
   --modal-bg: rgba(64, 64, 64, 1);
   --modal-border: double darkolivegreen 3px;
   --fondoNoBlanco: #e6e6e6;
@@ -237,6 +238,9 @@ input {
 }
 .Banco {
   background-color: var(--Bancos);
+}
+.Barra {
+  background-color: var(--Barra);
 }
 
 #mostrarDatos {

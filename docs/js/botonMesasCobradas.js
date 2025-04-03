@@ -2,7 +2,7 @@ import { totalDiario } from "./funcionesQueryGet.js"
 import {revisarMesasCerradas} from "./funcionesLibroDiario.js" 
 
 export default async function botonMesasCobradas() {
-	
+
 	const boton = document.createElement("button")
 	boton.textContent = "Ver mesas cobradas"
 	boton.addEventListener("click", async() => {
