@@ -11,7 +11,6 @@ import { modalTicket } from "./js/modalTicket.js";
 import mostrarMesasAbiertas from "./js/mostrarMesasAbiertas.js";
 import modalLibroDiario from "./js/modalLibroDiario.js";
 import { verMesasCobradas } from "./js/modalMesasCobradas.js";
-import { actualizarMesaCobrada } from "./js/funcionesQueryPut.js";
 import { agregarEgreso } from "./js/agregarEgreso.js";
 import { guardarEgresos } from "./js/guardarEgresos.js";
 import { actualizarEgresos } from "./js/actualizarEgresos.js";
@@ -41,10 +40,7 @@ const app = Vue.createApp({
           .innerHTML.replace(" ", "-");
         mostrarMesa(mesa);
       }
-      if (e.target.className === "botonMesaCobrada") {
-        actualizarMesaCobrada(Number(e.target.id.replace("b", "")));
-      }
-      if (e.target.className === "remove") {
+     if (e.target.className === "remove") {
         quitarArticulo(e);
         guardarEgresos();
         actualizarEgresos();
