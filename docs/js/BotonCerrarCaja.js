@@ -1,5 +1,3 @@
-import { cerrarCaja } from "./funcionesQueryPost.js"
-
 export default function botonCerrarCaja() {
 	const botonCerrar = document.createElement("button")
 	botonCerrar.id = "cerrarCaja"
@@ -7,7 +5,9 @@ export default function botonCerrarCaja() {
 	let confirmar
 	botonCerrar.addEventListener("click", e =>{
 		confirmar = window.confirm("Cerrar Caja y reiniciar valores?")
-		if(confirmar){cerrarCaja() }}
+		if(confirmar){
+			limpiarLibroDiario()
+	 		actualizarEgresos() }}
 	)
 return botonCerrar
 }
