@@ -1,5 +1,4 @@
 import botonCerrarModal from "./botonCerrarModal.js";
-import { guardarHistorial } from "./funcionesQueryPost.js";
 import { validarCobro } from "./validarCobro.js";
 import {imprimirMostrarDatos} from "./imprimirTicket.js"
 import {dbTicket} from "./leerDb.js"
@@ -27,7 +26,7 @@ export async function modalTicket() {
 
     $botonCobrarMesa.addEventListener("click", (e) =>{ 
 	$botonCobrarMesa.disabled = true
-	guardarHistorial()});
+	});
 	$contenedorBotones.appendChild($botonCobrarMesa)
 	$contenedorBotones.appendChild($botonImprimir)
     const $ticketFinal = document.createElement("div");
