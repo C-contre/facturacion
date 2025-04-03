@@ -1,5 +1,4 @@
 import cobrarMesa from "./cobrarMesa.js";
-import { guardarHistorial } from "./funcionesQueryPost.js";
 
 export function validarCobro() {
   const $botonCobrar = document.querySelector("#cobrar");
