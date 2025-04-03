@@ -1,18 +1,21 @@
 import leerMesaAbierta from "./leerMesaAbierta.js";
 
 export async function generarTicket() {
-  const response = await fetch("http://localhost:3000/ult-orden");
+//   const response = await fetch("http://localhost:3000/ult-orden");
 //   console.log(response);
-  const data = await response.json();
-  const orden = data.orden;
+//   const data = await response.json();
+// const orden = data.orden
+  const orden = 57;
 
+  	const hoy = new Date()
+	const fecha = `${hoy.getDate()}-${hoy.getMonth()}-${hoy.getFullYear()}`
+  const datos = leerMesaAbierta();
   const $ul = document.querySelector(".imprimir");
   const num = document.querySelector("#orden");
-  num.innerHTML = `<p>Orden N°: ${orden + 1}</p><p>Mesa: ${
+  num.innerHTML = `<p>${fecha} - Orden N°: ${orden + 1}</p><p>Mesa: ${
     document.querySelector("#mesaMostrada").innerText
   }</p>`;
 
-  const datos = leerMesaAbierta();
 
   let dato = `<li class='negrita'>
     <textarea class='impr col11' readonly=true>Detalle</textarea> 
