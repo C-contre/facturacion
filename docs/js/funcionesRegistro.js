@@ -1,4 +1,3 @@
-import { llamarEgresos, llamarIngresos } from "./funcionesQueryGet.js";
 
 export async function mostrarRegistro(){
 
@@ -27,8 +26,8 @@ export async function mostrarRegistro(){
 		return window.alert("Completar Fecha Inicio y fecha Cierre, fecha Cierre debe ser mayor a fecha Inicio")
 	}
 	
-	const respEgresos = await llamarEgresos(param)
-	const respIngresos = await llamarIngresos(paramResumen)
+	const respEgresos = []
+	const respIngresos = []
 
 	const containerIngresos = document.querySelector("#mostrarIngresos")
 	const containerEgresos = document.querySelector("#mostrarEgresos")
