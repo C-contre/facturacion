@@ -1,8 +1,9 @@
 
 // Función para cargar el archivo JSON
+const url = "https://c-contre.github.io/facturacion/json/db.json"
 export async function dbMesas() {
   try {
-    const data = await fetch("../json/db.json")
+    const data = await fetch(url)
     const datos = await data.json()
 	 const mesas = datos.mesas
     return mesas
@@ -13,7 +14,7 @@ export async function dbMesas() {
   
 export async function dbPrecios() {
   try {
-    const data = await fetch("../json/db.json");
+    const data = await fetch(url);
     const datos = await data.json();
     const precios = datos.datos;
     return precios
@@ -24,7 +25,7 @@ export async function dbPrecios() {
 
 export async function dbTicket() {
   try {
-    const data = await fetch("../json/db.json");
+    const data = await fetch(url);
     const datos = await data.json();
     const infoTicket = datos.ticket;
     return infoTicket
