@@ -1,4 +1,3 @@
-import { totalDiario } from "./funcionesQueryGet.js"
 import {revisarMesasCerradas} from "./funcionesLibroDiario.js" 
 
 export default async function botonMesasCobradas() {
@@ -11,8 +10,7 @@ export default async function botonMesasCobradas() {
 		if(!fecha || fecha ===""){
 			return window.alert("Abrir libro diario, definir hora de apertura")
 		 }
-		const $verMesas = await revisarMesasCerradas()
-		document.querySelector("#dinamicoMesasCerradas").innerHTML = $verMesas.innerHTML;
+		
 		document.querySelector(".anularFondo").style.display = "flex";
 		document.querySelector(".mesasCobradas").style.display="flex"})
 	return boton
