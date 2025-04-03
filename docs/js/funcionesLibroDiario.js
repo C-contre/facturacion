@@ -1,4 +1,3 @@
-import { totalDiario } from "./funcionesQueryGet.js";
 import manejoResumenDiario from "./manejoResumenDiario.js";
 
 export function guardarCajaInicial() {
@@ -80,7 +79,7 @@ export async function revisarMesasCerradas() {
 		fecha = localStorage.getItem("cajaInicial").Fecha;
 	 }
 	if(fecha != ""){
-    const mesas = await totalDiario();
+    const mesas = [];
 
     mesas.forEach((mesa, n) => {
         const $actualizar = document.createElement("button");
