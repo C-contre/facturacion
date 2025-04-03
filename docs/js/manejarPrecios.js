@@ -1,5 +1,4 @@
 import botonCerrarModal from "./botonCerrarModal.js";
-import { putPrecios } from "./funcionesQueryPut.js";
 import { dbPrecios } from "./leerDb.js";
 export async function modalPrecios() {
   const container = document.createElement("div");
@@ -64,6 +63,4 @@ export async function actualizarPrecios() {
     exportar.push([i.innerText, Number(precios[n].innerText)]);
   }
 	});
-	console.log(exportar);
-	  putPrecios(exportar);
 }
